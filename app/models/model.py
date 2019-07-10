@@ -1,0 +1,55 @@
+class Game:
+    def __init__(self, name, group_size, energy_level, risk_level, noise_level, description, other_group_size = "none", other_other = "none"):
+        self.name = name
+        self.group_size = group_size
+        self.other_group_size = other_group_size
+        self.other_other = other_other
+        self.energy_level = energy_level
+        self.risk_level = risk_level
+        self.noise_level = noise_level
+        self.description = description
+        
+rps_champ = Game("Rock Paper Scissors Championship", "large", "high", "low", "loud", "Everyone looks around for an opponent. They play best-of-three rock-paper-scissors. The winner continues in search of another opponent. The loser becomes one of a growing crowd of people behind the winner and chants their name in all subsequent challenges. This continues, with winners gradually adding to their crew until only two champions (and their supporting crowds) remain. Those two go head to head and the final winner is celebrated by everyone.")
+
+evolution = Game("Rock Paper Scissors Evolution", "small", "high", "low", "loud", "Everyone begins as an egg. Each player looks around for an opponent who is the same rank as they are. They play best-of-three rock-paper-scissors. The winner is promoted to the next rank. The loser is demoted to the previous rank. The cycle repeats until someone ascends. The ranks are: egg -> chicken -> velociraptor -> immortal -> ascended", "medium", "large")
+
+debug = Game("Debugger", "small", "low", "medium", "quiet", "One person is designated as the debugger and sent away from the group. The group devises a rule to govern their behavior while the psychiatrist is away. When the psychiatrist returns, the group follows the agreed-upon rule, and the psychiatrist must deduce the rule. Some example rules: Everyone with glasses lies, Every answer must start with the first letter of your own name, Designate a 'controller' and lie if and only if his/her legs are crossed, Alternate lies and truth", "medium", "large")
+
+contact = Game("Contact", "small", "medium", "low", "quiet", "One player is designated the wordmaster and thinks of a word, which must be a common noun. The wordmaster gives the first letter of the word. For example, if the word is 'crocodile', they'll say 'C'. Other players will think of words that start with C. If a player thinks of a word like 'corn', they'll describe that thing, like 'it grows on a cob! If another player thinks they know what word that first player is thinking of, they'll look at that player, shout ='CONTACT!' and then start counting up to 10 and try to say the word together: '1-2-3-4-5-6-7-8-9-10-CORN!' If they successfully do this without getting blocked, the wordmaster will give an additional letter, (in this case 'C-R') The wordmaster can block a contact countdown by interrupting with the word they're thinking of - in this case, by saying 'IT'S NOT CORN!' - before the players get to it. If the players are blocked, or if they say TWO DIFFERENT WORDS, the block is unsuccessful and they have to start over. The game ends when a player tries to make contact on the wordmaster's word (which he/she cannot block). Even if the contact is unsuccessful, the player who said the correct word wins and becomes the next round's wordmaster", "medium")
+
+
+categories_elim = Game("Categories: Elimination", "small", "medium", "low", "quiet", "Players stand in a semicircle and the teacher is the conductor. The conductor announces a category for the round. The conductor prefaces this game by saying 'I will be the completely unfair and arbitrary judge. If you say 'light blue' and I don't think that's a color or I just don't like that answer, then you're out! If you repeat an answer or if you hesitate too long, you're out!' Then the conductor points to players in random order until a player repeats another player's answer or hesitates. That player is out. Repeat until one player remains.", "medium")
+
+categories_chain = Game("Categories: Chain", "large", "low", "high", "quiet", "Players stand in a circle. Teacher announces a category. Players raise one hand. Starting player points to a player accross the circle from them and names something from the category, and then that player does the same to someone else. This continues until there is only one player left, and that player points back to the starting player. Pass the energy by repeating those exact same items. Make the game harder by removing the pointing or by getting multiple categories going at once.", "medium")
+
+yee_haw = Game("Yee-Haw!", "large", "high", "high", "loud", "This game is a pass-the-energy game: YEE-HAW! - pass left/right, Oil slick - skip the next person, but continue the direction, Get along lil' doggie - send across to anyone not a neighbor, Get off my porch! - reject a 'get along', Rope - switch places with someone, and it's still your turn!, Four-shifter gearbox! - Everyone takes one step in, and fist pumps to '1-2-3-4!'", "medium")
+
+ninja = Game("Ninja", "small", "medium", "low", "quiet", "Everyone stands shoulder-to-shoulder and jumps back. Players take turns making one fluid motion to attack their neighbors (who are vulnerable only from elbow to wrist). If you hit your neighbor, they lose their arm. Then your turn is over. Freeze until you either must dodge an attack or until your next turn.", "medium", "large",)
+
+allit_names = Game("Alliterated Names", "small", "low", "low", "quiet", "Each person comes up with an adjective that describes them and is alliterative with their first name (e.g. 'Tyrannical Taylor'). They then say this name and perform an action to accompany the description. The group mirrors their action back at them. We go around the circle twice, and then this becomes a standard energy passing game, where you perform your own action and say your own phrase top receive the energy, and you say someone else's phrase and perform their action to send the energy to them.", "medium", "large")
+
+sculpture = Game("Sculptures", "small", "medium", "low", "quiet", "Three players. The first strikes a pose behind or otherwise out of sight of the second. The third tries to coach the second into the exact same position using only their words (no gestures).", "medium", "large")
+
+group_chant = Game("Group Counting Game", "small", "low", "low", "loud", "Everyone stands in a tight circle, shoulder to shoulder, takes a deep breath in, then a deep breath out. Then, without looking up, signaling, or otherwise prompting, a player says 'one' and takes a step back out of the circle. The goal for each player to say one number. If two players speak or move at the same time, the game starts over. Repeat until victorious.", "medium", "large")
+
+bip_bop = Game("Bippity Bippity Bop", "medium", "high", "medium", "loud", "Make a circle with one person in the middle.  The person goes up to people in the circle and tries to get them to make a mistake.  If they say 'Bippity Bippity Bop' the person on the outside must say 'Bop' before the center person is done speaking. If the center person says 'Bop' the person on the outside must do nothing. If the center person says 'Hippity Hippity Hop', the person on the outside must hop before the center person is done speaking. Finally the center person may say 'Elephant 12345678910' and the outer person must make an elephant trunk and the two people next to them must make ears before the center person reaches 10.", "large", "small")
+
+wah  = Game("Wah", "medium", "high", "medium", "loud", "This is a waltz. On beat one, the receiver of the energy lifts his hands above his head and says 'wah!'. On beat two, his neighbors chop in and both say 'wah!. On beat 3, he chops down and sends the energy to the next recipient. The cycle repeats A player sits down when they breaks tempo or does an incorrect action. The circle does not contract to exclude the seated players, but the immediate neighbors are always the nearest standing players. Repeat until 2 or 3 remain and either declare them co-victors or play a tiebreaker.", "large", "small")
+
+bowl_spag = Game("Bowl of Spaghetti", "medium", "medium", "low", "loud", "You kind of have to see this one to understand it.")
+
+game_of_three = Game("Game of Threes", "small", "medium", "low", "quiet", "Three players. For example. The first player strikes a pose and says 'I'm a chicken!' The second player strikes a pose and says 'I'm a farmer!' The third player strikes a pose and brings it all together by saying 'I'm an egg!' The last player stays in and becomes the first player in the next round. This game is super quick, so if each round only takes a few seconds, that's fine. The goal is to make choices quickly without worrying whether they are the very best possible choices.", "medium", "large")
+
+nose_type = Game("Nose Typing", "small", "low", "low", "quiet", "Have students pull up a blank text file, word document, or google doc. Then project a sentence (without apostrophes) on the board. Then have them reproduce the sentence perfectly using ONLY their noses.", "medium", "large")
+
+seven_things = Game("Seven Things", "small", "medium", "medium", "loud", "In a circle, first student says a category. Next student has to say seven words related to that category while the rest of the group counts them off. There are no wrong answers so if you can't think of anything in the category, SAY ANYTHING! Then the student who gave the seven words gives the next category to the following student.", "medium", "large")
+
+robot_cont = Game("Robot-Controller", "medium", "high", "medium", "loud", "Only possible to play if you have space. 4 controllers, 4 blindfolded 'robots'. The controllers are assigned a robot to direct. There are rolls of toilet paper thrown on the floor. The controller needs to get the robot to pick up a toilet paper and then hit one of the other robots with it. Last robot standing wins.", "large", "none")
+
+shake_out = Game("Shake Out", "small", "high", "low", "loud", "Everyone progresses through shaking out their right arm, left arm, right leg, and left leg.  It is first done for 10 shakes, then 9 and so on until 1--everyone shouts out the count throughout1", "medium", "large")
+
+monik = Game("Monikers", "small", "medium", "medium", "loud", "Everyone gets three index cards and writes three things on them based on prompts (ex: favorite place in NYC, favorite summer activity, movie, actor). Collect all cards and divide the group into two teams.  Three rounds: 1. Each player gets one minute to describe as many cards as possible to their team without saying whats on the card. 2. Each player gets one minute to describe as many cards as possible but can only say one word. 3. each player gets one minute to describe as many cards as possible only through movement.", "medium")
+
+
+
+game_list = [rps_champ, evolution, debug, contact, categories_elim, categories_chain, yee_haw, ninja, allit_names, sculpture, group_chant, bip_bop, wah, bowl_spag, game_of_three, nose_type, seven_things, robot_cont, shake_out, monik]

@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Upperline Game Picker</title>
+        <link rel="stylesheet" href="static/style.css" type="text/css" />
+    </head>
+    <body>
+        <div class = "bubble">
+            <h1>Upperline Game Picker!</h1>
+            <h3>Ready to play a game? Answer the following questions to find the game that best fits your situation.</h3>
+            <div class = "container">
+                <form method = "post" action = /index>
+                    <div class="grid">
+                        <div class="tile">
+                            <label>What is the size of your group?</label>
+                            <div class="selectdiv">
+                                <select name = "group_size" class = "select-class">
+                                    <option value = "large">Large</option>
+                                    <option value = "medium">Medium</option>
+                                    <option value = "small">Small</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <label>What is your desired energy level?</label>
+                            <div class="selectdiv">
+                                <select name = "energy" class = "select-class">
+                                <option value = "high">High Energy</option>
+                                <option value = "medium">Medium Energy</option>
+                                <option value = "low">Low Energy</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <label>What is your desired risk level?</label>
+                            <div class="selectdiv">
+                            <select name = "risk" class = "select-class">
+                                <option value = "high">High Risk</option>
+                                <option value = "medium">Medium Risk</option>
+                                <option value = "low">Low Risk</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="tile">
+                            <label>What is your desired noise level?</label>
+                                <div class="selectdiv">
+                                    <select name = "noise" class = "select-class">
+                                    <option value = "loud">Loud</option>
+                                    <option value = "quiet">Quiet</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" name="Submit"/>
+                    </div>
+                </form>
+            </div>
+            <h3>You have selected a {{group_size}} size group with a {{energy}} energy level, a {{risk}} risk level and a {{noise_level}} noise level.</h3>
+            
+            <h4>{{str_of_names}}</h4>
+        </div>
+        <div class="games_to_play">
+            <ul>
+                {% for game in list_of_games %}
+                <li>{{game.name}} : {{game.description}}</li>
+                {% endfor %} 
+            </ul>
+           
+            
+            <!--<ul class="collapsible">-->
+            <!--    <li>-->
+            <!--        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>-->
+            <!--        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+            <!--    </li>-->
+            <!--    <li>-->
+            <!--        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>-->
+            <!--        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+            <!--    </li>-->
+            <!--    <li>-->
+            <!--        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>-->
+            <!--        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>-->
+            <!--    </li>-->
+            <!--</ul>-->
+        </div>
+    </body>
+</html>
