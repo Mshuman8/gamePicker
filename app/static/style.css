@@ -82,7 +82,7 @@ input[type=submit] {
 
 .games_to_play {
     width: 70%;
-    margin: 30px 15%;
+    margin: 30px 15% 100px;
     font-family: Montserrat, sans-serif;
     font-size: 20px;
 }
@@ -112,5 +112,4 @@ h4 {
 
 li {
     margin-top: 20px;
-    margin-bottom: 100px;
 }
