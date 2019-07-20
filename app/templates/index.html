@@ -24,26 +24,28 @@
                             <label>What is your desired energy level?</label>
                             <div class="selectdiv">
                                 <select name = "energy" class = "select-class">
-                                <option value = "high">High Energy</option>
-                                <option value = "medium">Medium Energy</option>
-                                <option value = "low">Low Energy</option>
-                            </select>
+                                    <option value = "any">Any Energy</option>
+                                    <option value = "high">High Energy</option>
+                                    <option value = "medium">Medium Energy</option>
+                                    <option value = "low">Low Energy</option>
+                                </select>
                             </div>
                         </div>
                         <div class="tile">
                             <label>What is your desired risk level?</label>
                             <div class="selectdiv">
-                            <select name = "risk" class = "select-class">
-                                <option value = "high">High Risk</option>
-                                <option value = "medium">Medium Risk</option>
-                                <option value = "low">Low Risk</option>
-                            </select>
+                                <select name = "risk" class = "select-class">
+                                    <option value = "any">Any Risk</option>
+                                    <option value = "high">High Risk</option>
+                                    <option value = "medium">Medium Risk</option>
+                                    <option value = "low">Low Risk</option>
+                                </select>
                             </div>
                         </div>
                         <div class="tile">
                             <label>What is your desired noise level?</label>
                                 <div class="selectdiv">
-                                    <select name = "noise" class = "select-class">
+                                <select name = "noise" class = "select-class">
                                     <option value = "loud">Loud</option>
                                     <option value = "quiet">Quiet</option>
                                 </select>
@@ -61,7 +63,7 @@
         </div>
         <div class="games_to_play">
             <ul>
-                {% for game in list_of_games %}
+                {% for game in rand_three_games %}
                 <li>{{game.name}} : {{game.description}}</li>
                 {% endfor %} 
             </ul>

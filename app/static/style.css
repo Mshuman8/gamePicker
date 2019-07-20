@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body {
     background-color: #fff;
+    margin-top: 30px;
 }
 
 .submit {
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -70,13 +72,17 @@ input[type=submit] {
 
 .bubble {
     width: 70%;
-    margin: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    
     font-family: Montserrat, sans-serif;
 }
 
 .games_to_play {
     width: 70%;
-    margin: 15%;
+    margin: 30px 15%;
     font-family: Montserrat, sans-serif;
     font-size: 20px;
 }
@@ -86,8 +92,8 @@ input[type=submit] {
     /*padding: 35px;*/
     padding-left: 80px;
     padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     line-height: 36px;
     font-size: 24px;
 }
@@ -105,5 +111,6 @@ h4 {
 }
 
 li {
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 100px;
 }
