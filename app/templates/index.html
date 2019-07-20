@@ -1,7 +1,16 @@
 <html>
     <head>
         <title>Upperline Game Picker</title>
+        <!--Use for materialize-->
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+        <!--Use for bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="static/style.css" type="text/css" />
+
+
     </head>
     <body>
         <div class = "bubble">
@@ -62,11 +71,46 @@
             <h4>{{str_of_names}}</h4>
         </div>
         <div class="games_to_play">
-            <ul>
+            <!--Done with bootstrap-->
+            <div id="accordion">
                 {% for game in rand_three_games %}
-                <li>{{game.name}} : {{game.description}}</li>
-                {% endfor %} 
-            </ul>
+                    <div class="card">
+                        <div class="card-header" id="heading{{game.id}}">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{game.id}}" aria-expanded="false" aria-controls="collapse{{game.id}}">
+                                    {{game.name}}
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse{{game.id}}" class="collapse" aria-labelledby="heading{{game.id}}" data-parent="#accordion">
+                            <div class="card-body">
+                                {{game.description}}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+            
+            
+            
+            <!--Done with materialize-->
+            <!--<ul class="collapsible">-->
+            <!--    {% for game in rand_three_games %}-->
+            <!--    <li>-->
+            <!--      <div class="collapsible-header">{{ game.name }}</div>-->
+            <!--      <div class="collapsible-body"><span>{{game.description}}</span></div>-->
+            <!--    </li>-->
+            <!--    {% endfor %}-->
+            <!--</ul>-->
+           
+            <!--Done on my own with bullets-->
+            <!--<ul>-->
+            <!--    {% for game in rand_three_games %}-->
+            <!--    <li>{{game.name}} : {{game.description}}</li>-->
+            <!--    {% endfor %} -->
+            <!--</ul>-->
            
             
             <!--<ul class="collapsible">-->
@@ -85,4 +129,5 @@
             <!--</ul>-->
         </div>
     </body>
+    <script type="text/javascript" src="static/bootstrap.js"></script>
 </html>

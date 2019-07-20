@@ -41,6 +41,8 @@ def index():
             rand_three_games = [list_of_games[0], list_of_games[1], list_of_games[2]]
         else:
             rand_three_games = list_of_games
+        for x in range(len(rand_three_games)):
+            rand_three_games[x].id = str(x)
         # rand_num1 = random.randint(0, len(list_of_games))
         # rand_num2 = random.randint(0, len(list_of_games))
         # if rand_num1 == rand_num2:

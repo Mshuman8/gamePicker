@@ -9,10 +9,21 @@ body {
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
+    height: 1.5;
+    /*font-size: 50px;*/
+}
+
+.card-header {
+    background-color: #b2dfdb;
+    /*text-color: black*/
 }
 
 .selectdiv{
     margin: 18px;    
+}
+
+.card-header{
+    font-size: 30px;
 }
 
 .grid {
@@ -54,10 +65,12 @@ input[type=submit] {
     justify-content: center;
     background-color: #3d348b;
     color: #fff;
-    height: 45px;
+    height: 65px;
     width: 120px;
-    font-size: 30px;
+    font-size: 1rem;
+    line-height: 1.25;
     font-family: Montserrat, sans-serif;
+    padding: 5px;
 }
 
 .tile {
@@ -75,7 +88,7 @@ input[type=submit] {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     
     font-family: Montserrat, sans-serif;
 }
@@ -90,16 +103,18 @@ input[type=submit] {
 .container {
     /*background-color: #b2dfdb;*/
     /*padding: 35px;*/
-    padding-left: 80px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 90px 80px;
+    /*padding-lef: 80px;*/
+    /*padding-right: 50px;*/
+    /*padding-top: 30px;*/
+    /*padding-bottom: 30px;*/
     line-height: 36px;
     font-size: 24px;
 }
 
 h1 {
     font-size: 48px;
+    margin: 40px 0px;
 }
 
 h3 {
@@ -108,8 +123,13 @@ h3 {
 
 h4 {
     font-size: 25px;
+    margin: 20px 0px;
 }
 
 li {
     margin-top: 20px;
+}
+
+h5 {
+    color: black
 }
