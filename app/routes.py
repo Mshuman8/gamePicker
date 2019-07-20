@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request
-from app.models import model, formopener
+from app.models import model
 
 @app.route('/')
 @app.route('/index', methods = ["GET", "POST"])
@@ -8,7 +8,7 @@ def index():
     if request.method == "GET":
         return render_template('index.html')
     else:
-        user_data = formopener.dict_from(request.form)
+        user_data = request.form
         group_size = user_data["group_size"]
         energy = user_data["energy"]
         risk = user_data["risk"]
